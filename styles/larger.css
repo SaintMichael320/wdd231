@@ -1,0 +1,176 @@
+/* ============================================
+   WDD231 - larger.css (Tablet & Desktop)
+   ============================================ */
+
+@media (min-width: 640px) {
+  /* ---- HEADER ---- */
+  header {
+    padding: 0.75rem 2rem;
+  }
+
+  /* ---- MAIN ---- */
+  main {
+    padding: 2rem 2rem;
+  }
+
+  main h1 {
+    font-size: 2.5rem;
+  }
+
+  /* ---- PROFILE ---- */
+  .profile-section {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 1.5rem;
+  }
+}
+
+@media (min-width: 768px) {
+  /* ---- HEADER ---- */
+  #menu-btn {
+    display: none;
+  }
+
+  /* ---- NAVIGATION (Horizontal) ---- */
+  nav {
+    background-color: var(--color-surface);
+    border-bottom: 2px solid var(--color-border);
+  }
+
+  nav ul {
+    display: flex !important;
+    flex-direction: row;
+    justify-content: center;
+    gap: 0;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  nav ul li a {
+    border-bottom: none;
+    border-left: none;
+    padding: 0.85rem 1.5rem;
+    font-size: 0.85rem;
+    position: relative;
+    color: var(--color-text-muted);
+  }
+
+  nav ul li a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 3px;
+    background-color: var(--color-accent);
+    transition: width var(--transition);
+    border-radius: 3px 3px 0 0;
+  }
+
+  nav ul li a:hover::after,
+  nav ul li a.active::after {
+    width: 70%;
+  }
+
+  nav ul li a:hover {
+    background-color: transparent;
+    color: var(--color-accent);
+  }
+
+  nav ul li a.active {
+    color: var(--color-accent);
+    background-color: transparent;
+    border-left: none;
+  }
+
+  /* ---- MAIN LAYOUT ---- */
+  main {
+    padding: 2rem;
+  }
+
+  main h1 {
+    font-size: 3rem;
+  }
+
+  /* ---- SECTION GRID ---- */
+  .sections-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+  }
+
+  .sections-grid .certificate-section {
+    grid-column: 1 / -1;
+  }
+
+  /* ---- COURSE GRID ---- */
+  #course-list {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  }
+
+  /* ---- FOOTER ---- */
+  footer {
+    padding: 2rem;
+  }
+
+  .footer-inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1.5rem;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: left;
+  }
+
+  .footer-social {
+    justify-content: flex-start;
+    margin-bottom: 0;
+  }
+
+  .footer-info {
+    text-align: right;
+  }
+
+  .footer-info-center {
+    text-align: center;
+  }
+}
+
+@media (min-width: 1024px) {
+  header {
+    padding: 0.75rem 3rem;
+  }
+
+  main {
+    padding: 2.5rem 3rem;
+  }
+
+  .sections-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+
+  #course-list {
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  }
+
+  section {
+    padding: 1.75rem;
+  }
+
+  section h2 {
+    font-size: 1.3rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  header {
+    padding: 0.75rem 4rem;
+  }
+
+  main {
+    padding: 3rem 4rem;
+  }
+}
