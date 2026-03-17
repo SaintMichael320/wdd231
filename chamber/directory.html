@@ -3,17 +3,25 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Business directory of chamber members">
+
+  <!-- Title & Meta -->
+  <title>Timbuktu Chamber Directory – Find Local Businesses</title>
+  <meta name="description" content="Explore local businesses in Timbuktu through our Chamber Directory. Find services, contact info, and membership opportunities.">
   <meta name="author" content="Michael Pienaar">
-  <title>Chamber Directory</title>
 
-  <link rel="icon" href="images/favicon.ico">
+  <!-- Favicon -->
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
 
-  <!-- Social Media Meta -->
-  <meta property="og:title" content="Chamber Directory">
-  <meta property="og:description" content="Explore local businesses in our chamber">
-  <meta property="og:image" content="images/preview.jpg">
-  <meta property="og:url" content="https://example.com/chamber/directory.html">
+  <!-- Open Graph / Social Media -->
+  <meta property="og:title" content="Timbuktu Chamber Directory – Local Businesses">
+  <meta property="og:description" content="Discover Timbuktu Chamber member businesses, view services, contact info, and learn about networking opportunities in our community.">
+  <meta property="og:image" content="https://saintmichael320.github.io/wdd231/chamber/images/preview.jpg">
+  <meta property="og:url" content="https://saintmichael320.github.io/wdd231/chamber/directory.html">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
   <!-- CSS -->
   <link rel="stylesheet" href="styles/normalize.css">
@@ -24,7 +32,7 @@
 <body>
 
 <header>
-  <h1>Chamber of Commerce</h1>
+  <h1>Timbuktu Chamber Directory</h1>
   <button id="menu">☰</button>
 
   <nav>
@@ -38,11 +46,11 @@
 </header>
 
 <main>
-  <h2>Business Directory</h2>
+  <h2>Member Businesses</h2>
 
   <div class="view-buttons">
-    <button id="gridBtn">Grid</button>
-    <button id="listBtn">List</button>
+    <button id="gridBtn">Grid View</button>
+    <button id="listBtn">List View</button>
   </div>
 
   <div id="members" class="grid"></div>
@@ -55,6 +63,7 @@
   <p>Last Modified: <span id="lastModified"></span></p>
 </footer>
 
-<script src="scripts/directory.js"></script>
+<!-- JS -->
+<script src="scripts/directory.js" defer></script>
 </body>
 </html>
