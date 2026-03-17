@@ -1,0 +1,59 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+}
+
+/* Header */
+header {
+  background: #222;
+  color: white;
+  padding: 1rem;
+}
+
+/* Navigation */
+nav ul {
+  list-style: none;
+  padding: 0;
+  display: none;
+}
+
+nav ul.open {
+  display: block;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  display: block;
+  padding: 0.5rem;
+}
+
+/* Members Grid */
+#members.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+#members.list {
+  display: block;
+}
+
+/* Cards */
+.card {
+  border: 1px solid #ccc;
+  padding: 1rem;
+}
+
+.card img {
+  max-width: 100%;
+}
+
+/* Footer */
+footer {
+  background: #222;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+}

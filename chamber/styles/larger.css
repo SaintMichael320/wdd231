@@ -1,0 +1,12 @@
+@media (min-width: 32rem) {
+
+  nav ul {
+    display: flex;
+    gap: 1rem;
+  }
+
+  #members.grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+}
