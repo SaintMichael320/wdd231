@@ -1,24 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Pretoria Chamber of Commerce – Connecting Pretoria's business community, fostering growth, and celebrating local enterprise in South Africa's capital." />
-  <meta name="author" content="Michael Pienaar" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Pretoria Chamber of Commerce – Connecting Pretoria's business community, fostering growth, and celebrating local enterprise in South Africa's capital.">
+  <meta name="author" content="Michael Pienaar">
 
   <!-- Open Graph / Social Media -->
-  <meta property="og:title" content="Pretoria Chamber of Commerce | Home" />
-  <meta property="og:description" content="Connecting Pretoria's business community. Discover events, member spotlights, and opportunities to grow with the Pretoria Chamber of Commerce." />
-  <meta property="og:image" content="https://saintmichael320.github.io/wdd231/chamber/images/hero.svg" />
-  <meta property="og:url" content="https://saintmichael320.github.io/wdd231/chamber/" />
-  <meta property="og:type" content="website" />
-  <meta property="og:locale" content="en_ZA" />
+  <meta property="og:title" content="Pretoria Chamber of Commerce — Home Page">
+  <meta property="og:description" content="Connecting Pretoria's business community. Discover events, member spotlights, and opportunities to grow with the Pretoria Chamber of Commerce.">
+  <meta property="og:image" content="https://saintmichael320.github.io/wdd231/chamber/images/hero.svg">
+  <meta property="og:url" content="https://saintmichael320.github.io/wdd231/chamber/">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_ZA">
 
   <title>Pretoria Chamber of Commerce | Home</title>
-  <link rel="icon" href="../favicon.ico" />
+  <link rel="icon" href="../favicon.ico">
 
-  <link rel="stylesheet" href="styles/small.css" />
-  <link rel="stylesheet" href="styles/larger.css" />
+  <!-- Google Fonts — preconnect then stylesheet link (no @import) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles/small.css">
+  <link rel="stylesheet" href="styles/larger.css">
 
   <script src="scripts/navigation.js" defer></script>
   <script src="scripts/date.js" defer></script>
@@ -73,7 +78,7 @@
 <main class="chamber-main">
 
   <!-- ─── HERO ─── -->
-  <section class="hero fade-in" aria-label="Chamber welcome banner">
+  <section class="hero fade-in" aria-labelledby="hero-heading">
     <img
       src="images/hero.svg"
       alt="Pretoria city skyline at night — Pretoria Chamber of Commerce"
@@ -81,16 +86,16 @@
       width="1200"
       height="480"
       loading="eager"
-    />
+    >
     <div class="hero-overlay" aria-hidden="true"></div>
     <div class="hero-content">
       <p class="hero-eyebrow">Est. 1902 · Pretoria, South Africa</p>
-      <h1 class="hero-title">
+      <h1 class="hero-title" id="hero-heading">
         Where <em>Business</em><br>
         Meets <em>Community</em>
       </h1>
       <p class="hero-sub">
-        Connecting Pretoria's most ambitious enterprises — driving growth,<br class="desktop-only">
+        Connecting Pretoria's most ambitious enterprises — driving growth,
         fostering partnerships, and building the city's future together.
       </p>
       <a href="join.html" class="btn-cta" aria-label="Join the Pretoria Chamber of Commerce">
@@ -105,9 +110,7 @@
 
     <!-- ─── WEATHER ─── -->
     <section class="card fade-in-1" aria-labelledby="weather-heading">
-      <p class="s-head" id="weather-heading" role="heading" aria-level="2">
-        Live Weather — Pretoria
-      </p>
+      <h2 class="s-head" id="weather-heading">Live Weather — Pretoria</h2>
 
       <div id="weather-now" aria-live="polite">
         <p class="loading-text">Loading current conditions…</p>
@@ -117,6 +120,7 @@
         id="weather-forecast"
         class="forecast"
         aria-live="polite"
+        role="region"
         aria-label="Three day temperature forecast"
       >
         <!-- Populated by weather.js -->
@@ -125,12 +129,10 @@
 
     <!-- ─── EVENTS ─── -->
     <section class="card fade-in-2" aria-labelledby="events-heading">
-      <p class="s-head" id="events-heading" role="heading" aria-level="2">
-        Upcoming Events
-      </p>
+      <h2 class="s-head" id="events-heading">Upcoming Events</h2>
 
       <article class="event-item">
-        <div class="event-date" aria-label="April 3rd">
+        <div class="event-date" role="img" aria-label="April 3rd">
           <span class="mo">Apr</span>
           <span class="dy">3</span>
         </div>
@@ -145,7 +147,7 @@
       </article>
 
       <article class="event-item">
-        <div class="event-date" aria-label="April 15th">
+        <div class="event-date" role="img" aria-label="April 15th">
           <span class="mo">Apr</span>
           <span class="dy">15</span>
         </div>
@@ -160,7 +162,7 @@
       </article>
 
       <article class="event-item">
-        <div class="event-date" aria-label="April 28th">
+        <div class="event-date" role="img" aria-label="April 28th">
           <span class="mo">Apr</span>
           <span class="dy">28</span>
         </div>
@@ -175,7 +177,7 @@
       </article>
 
       <article class="event-item">
-        <div class="event-date" aria-label="May 9th">
+        <div class="event-date" role="img" aria-label="May 9th">
           <span class="mo">May</span>
           <span class="dy">9</span>
         </div>
@@ -191,21 +193,16 @@
 
     </section>
 
-    <!-- ─── SPOTLIGHTS (full width) ─── -->
+    <!-- ─── SPOTLIGHTS ─── -->
     <section class="spotlights-section fade-in-3" aria-labelledby="spotlights-heading">
-      <div class="card" style="background:transparent; border:none; box-shadow:none; padding: 0;">
-        <p class="s-head" id="spotlights-heading" role="heading" aria-level="2">
-          Member Spotlights
-        </p>
-        <div
-          id="spotlights-container"
-          class="spotlights-grid"
-          role="list"
-          aria-live="polite"
-          aria-label="Featured chamber members"
-        >
-          <!-- Populated by spotlights.js -->
-        </div>
+      <h2 class="s-head" id="spotlights-heading">Member Spotlights</h2>
+      <div
+        id="spotlights-container"
+        class="spotlights-grid"
+        role="list"
+        aria-live="polite"
+      >
+        <!-- Populated by spotlights.js -->
       </div>
     </section>
 
@@ -219,7 +216,7 @@
 <footer>
   <div class="footer-inner">
 
-    <div>
+    <div class="footer-left">
       <div class="footer-brand">
         <div class="logo-emblem" aria-hidden="true">
           <span class="em-top">PTA</span>
@@ -228,7 +225,7 @@
         <span class="footer-brand-name">Pretoria Chamber of Commerce</span>
       </div>
 
-      <div class="footer-social" aria-label="Social media links">
+      <nav class="footer-social" aria-label="Social media links">
         <a
           href="https://github.com/SaintMichael320"
           target="_blank"
@@ -265,15 +262,13 @@
           </svg>
           Instagram
         </a>
-      </div>
+      </nav>
     </div>
 
     <div class="footer-copy">
       <p><strong>&copy; <span id="copyright-year"></span> Pretoria Chamber of Commerce</strong></p>
       <p>Pretoria, South Africa</p>
-      <p style="margin-top:0.25rem; color: var(--text-dim);">
-        Site by Michael Pienaar · WDD231
-      </p>
+      <p class="footer-credit">Site by Michael Pienaar · WDD231</p>
       <p id="lastModified"></p>
     </div>
 

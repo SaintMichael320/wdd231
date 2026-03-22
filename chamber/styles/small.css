@@ -3,7 +3,7 @@
    Aesthetic: Gold-Noir | Luxury Editorial | South African Pride
    ============================================================ */
 
-@import url('https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300&family=Syne:wght@400;600;700;800&display=swap');
+/* Google Fonts loaded via <link> in HTML — no @import needed */
 
 :root {
   --ink:        #060a0f;
@@ -134,7 +134,12 @@ header::after {
   line-height: 1;
 }
 
-.logo-emblem .em-top { font-size: 0.55rem; letter-spacing: 0.1em; }
+/* em-top needs enough contrast on the gold gradient */
+.logo-emblem .em-top {
+  font-size: 0.55rem;
+  letter-spacing: 0.1em;
+  color: var(--ink-2);
+}
 .logo-emblem .em-mid { font-size: 0.9rem; }
 
 .logo-text { display: flex; flex-direction: column; line-height: 1.2; }
@@ -501,6 +506,7 @@ nav ul li a.active {
   box-shadow: 0 4px 12px rgba(232,184,75,0.25);
 }
 
+/* ink on gold = 10.76:1 — passes AA */
 .event-date .mo {
   display: block;
   font-size: 0.6rem;
@@ -542,9 +548,9 @@ nav ul li a.active {
   text-transform: uppercase;
   padding: 0.15rem 0.5rem;
   border-radius: 100px;
-  background: rgba(41,182,216,0.12);
+  background: var(--ink-3);
   color: var(--cyan);
-  border: 1px solid rgba(41,182,216,0.25);
+  border: 1px solid var(--cyan-dim);
   margin-top: 0.4rem;
 }
 
@@ -779,4 +785,25 @@ footer {
 @keyframes pulse-opacity {
   0%, 100% { opacity: 1; }
   50%       { opacity: 0.35; }
+}
+
+/* ── FOOTER UTILITY CLASSES (replaces inline styles) ── */
+.footer-left {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.footer-credit {
+  margin-top: 0.25rem;
+  color: var(--text-dim);
+}
+
+/* ── SPOTLIGHTS SECTION ── */
+.spotlights-section {
+  grid-column: 1 / -1;
+}
+
+.spotlights-section .s-head {
+  margin-bottom: 1.25rem;
 }
