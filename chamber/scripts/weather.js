@@ -1,6 +1,3 @@
-// weather.js — OpenWeatherMap API for Pretoria, South Africa
-// IMPORTANT: Replace API_KEY with your free key from openweathermap.org
-
 const API_KEY  = '7cd1d6728c7c950dc18e9f981146ef04';
 const LAT      = -25.7479;
 const LON      =  28.2293;
