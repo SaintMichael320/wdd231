@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Pretoria Chamber of Commerce – Connecting Pretoria's business community, fostering growth, and celebrating local enterprise in South Africa's capital." />
+  <meta name="author" content="Michael Pienaar" />
+
+  <!-- Open Graph / Social Media -->
+  <meta property="og:title" content="Pretoria Chamber of Commerce | Home" />
+  <meta property="og:description" content="Connecting Pretoria's business community. Discover events, member spotlights, and opportunities to grow with the Pretoria Chamber of Commerce." />
+  <meta property="og:image" content="https://saintmichael320.github.io/wdd231/chamber/images/hero.svg" />
+  <meta property="og:url" content="https://saintmichael320.github.io/wdd231/chamber/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="en_ZA" />
+
+  <title>Pretoria Chamber of Commerce | Home</title>
+  <link rel="icon" href="../favicon.ico" />
+
+  <link rel="stylesheet" href="styles/small.css" />
+  <link rel="stylesheet" href="styles/larger.css" />
+
+  <script src="scripts/navigation.js" defer></script>
+  <script src="scripts/date.js" defer></script>
+  <script src="scripts/weather.js" defer></script>
+  <script src="scripts/spotlights.js" defer></script>
+</head>
+<body>
+
+<!-- ══════════════════════════════════════
+     HEADER
+══════════════════════════════════════ -->
+<header>
+  <a href="index.html" class="header-logo" aria-label="Pretoria Chamber of Commerce home">
+    <div class="logo-emblem" aria-hidden="true">
+      <span class="em-top">PTA</span>
+      <span class="em-mid">CoC</span>
+    </div>
+    <span class="logo-text">
+      <span class="logo-name">Pretoria CoC</span>
+      <span class="logo-sub">Chamber of Commerce</span>
+    </span>
+  </a>
+
+  <button
+    id="menu-btn"
+    aria-label="Toggle navigation menu"
+    aria-expanded="false"
+    aria-controls="nav-menu"
+  >
+    <span class="bar"></span>
+    <span class="bar"></span>
+    <span class="bar"></span>
+  </button>
+</header>
+
+<!-- ══════════════════════════════════════
+     NAVIGATION
+══════════════════════════════════════ -->
+<nav aria-label="Primary navigation">
+  <ul id="nav-menu" role="list">
+    <li><a href="index.html" class="active" aria-current="page">Home</a></li>
+    <li><a href="directory.html">Directory</a></li>
+    <li><a href="join.html">Join</a></li>
+    <li><a href="discover.html">Discover</a></li>
+    <li><a href="../index.html">WDD231 ↗</a></li>
+  </ul>
+</nav>
+
+<!-- ══════════════════════════════════════
+     MAIN
+══════════════════════════════════════ -->
+<main class="chamber-main">
+
+  <!-- ─── HERO ─── -->
+  <section class="hero fade-in" aria-label="Chamber welcome banner">
+    <img
+      src="images/hero.svg"
+      alt="Pretoria city skyline at night — Pretoria Chamber of Commerce"
+      class="hero-img"
+      width="1200"
+      height="480"
+      loading="eager"
+    />
+    <div class="hero-overlay" aria-hidden="true"></div>
+    <div class="hero-content">
+      <p class="hero-eyebrow">Est. 1902 · Pretoria, South Africa</p>
+      <h1 class="hero-title">
+        Where <em>Business</em><br>
+        Meets <em>Community</em>
+      </h1>
+      <p class="hero-sub">
+        Connecting Pretoria's most ambitious enterprises — driving growth,<br class="desktop-only">
+        fostering partnerships, and building the city's future together.
+      </p>
+      <a href="join.html" class="btn-cta" aria-label="Join the Pretoria Chamber of Commerce">
+        Become a Member
+        <span class="arrow" aria-hidden="true">→</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- ─── TWO-COLUMN CONTENT GRID ─── -->
+  <div class="content-grid">
+
+    <!-- ─── WEATHER ─── -->
+    <section class="card fade-in-1" aria-labelledby="weather-heading">
+      <p class="s-head" id="weather-heading" role="heading" aria-level="2">
+        Live Weather — Pretoria
+      </p>
+
+      <div id="weather-now" aria-live="polite">
+        <p class="loading-text">Loading current conditions…</p>
+      </div>
+
+      <div
+        id="weather-forecast"
+        class="forecast"
+        aria-live="polite"
+        aria-label="Three day temperature forecast"
+      >
+        <!-- Populated by weather.js -->
+      </div>
+    </section>
+
+    <!-- ─── EVENTS ─── -->
+    <section class="card fade-in-2" aria-labelledby="events-heading">
+      <p class="s-head" id="events-heading" role="heading" aria-level="2">
+        Upcoming Events
+      </p>
+
+      <article class="event-item">
+        <div class="event-date" aria-label="April 3rd">
+          <span class="mo">Apr</span>
+          <span class="dy">3</span>
+        </div>
+        <div class="event-body">
+          <h3>Business Breakfast Networking</h3>
+          <p>
+            Coffee, connections, and conversation with Pretoria's business
+            leaders at the Pretoria Country Club. 07:30–09:30.
+          </p>
+          <span class="event-tag">Networking</span>
+        </div>
+      </article>
+
+      <article class="event-item">
+        <div class="event-date" aria-label="April 15th">
+          <span class="mo">Apr</span>
+          <span class="dy">15</span>
+        </div>
+        <div class="event-body">
+          <h3>Annual Chamber Gala Dinner</h3>
+          <p>
+            Our flagship evening celebrating excellence in Pretoria business.
+            Awards ceremony, keynote speaker &amp; fine dining. 18:00–22:00.
+          </p>
+          <span class="event-tag">Annual Event</span>
+        </div>
+      </article>
+
+      <article class="event-item">
+        <div class="event-date" aria-label="April 28th">
+          <span class="mo">Apr</span>
+          <span class="dy">28</span>
+        </div>
+        <div class="event-body">
+          <h3>SME Digital Growth Workshop</h3>
+          <p>
+            Hands-on workshop covering digital marketing, e-commerce, and
+            online visibility for small businesses. Limited to 40 seats.
+          </p>
+          <span class="event-tag">Workshop</span>
+        </div>
+      </article>
+
+      <article class="event-item">
+        <div class="event-date" aria-label="May 9th">
+          <span class="mo">May</span>
+          <span class="dy">9</span>
+        </div>
+        <div class="event-body">
+          <h3>Property &amp; Investment Expo</h3>
+          <p>
+            Commercial property developers, investors, and financial advisors
+            showcase Pretoria's growth opportunities. 09:00–17:00.
+          </p>
+          <span class="event-tag">Expo</span>
+        </div>
+      </article>
+
+    </section>
+
+    <!-- ─── SPOTLIGHTS (full width) ─── -->
+    <section class="spotlights-section fade-in-3" aria-labelledby="spotlights-heading">
+      <div class="card" style="background:transparent; border:none; box-shadow:none; padding: 0;">
+        <p class="s-head" id="spotlights-heading" role="heading" aria-level="2">
+          Member Spotlights
+        </p>
+        <div
+          id="spotlights-container"
+          class="spotlights-grid"
+          role="list"
+          aria-live="polite"
+          aria-label="Featured chamber members"
+        >
+          <!-- Populated by spotlights.js -->
+        </div>
+      </div>
+    </section>
+
+  </div><!-- .content-grid -->
+
+</main>
+
+<!-- ══════════════════════════════════════
+     FOOTER
+══════════════════════════════════════ -->
+<footer>
+  <div class="footer-inner">
+
+    <div>
+      <div class="footer-brand">
+        <div class="logo-emblem" aria-hidden="true">
+          <span class="em-top">PTA</span>
+          <span class="em-mid">CoC</span>
+        </div>
+        <span class="footer-brand-name">Pretoria Chamber of Commerce</span>
+      </div>
+
+      <div class="footer-social" aria-label="Social media links">
+        <a
+          href="https://github.com/SaintMichael320"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="social-link"
+          aria-label="GitHub — opens in new tab"
+        >
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/>
+          </svg>
+          GitHub
+        </a>
+        <a
+          href="https://www.linkedin.com/in/michael-pienaar-191242337"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="social-link"
+          aria-label="LinkedIn — opens in new tab"
+        >
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+          </svg>
+          LinkedIn
+        </a>
+        <a
+          href="https://instagram.com/yourusername"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="social-link"
+          aria-label="Instagram — opens in new tab"
+        >
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/>
+          </svg>
+          Instagram
+        </a>
+      </div>
+    </div>
+
+    <div class="footer-copy">
+      <p><strong>&copy; <span id="copyright-year"></span> Pretoria Chamber of Commerce</strong></p>
+      <p>Pretoria, South Africa</p>
+      <p style="margin-top:0.25rem; color: var(--text-dim);">
+        Site by Michael Pienaar · WDD231
+      </p>
+      <p id="lastModified"></p>
+    </div>
+
+  </div>
+</footer>
+
+</body>
+</html>

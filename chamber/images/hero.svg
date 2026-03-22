@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 480" width="1200" height="480">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#020509"/>
+      <stop offset="50%" stop-color="#060f1c"/>
+      <stop offset="100%" stop-color="#0a1828"/>
+    </linearGradient>
+    <linearGradient id="glow-h" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="transparent"/>
+      <stop offset="35%" stop-color="#e8b84b" stop-opacity="0.15"/>
+      <stop offset="50%" stop-color="#e8b84b" stop-opacity="0.3"/>
+      <stop offset="65%" stop-color="#e8b84b" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="transparent"/>
+    </linearGradient>
+    <linearGradient id="fog-l" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0a1828" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#0a1828" stop-opacity="0.6"/>
+    </linearGradient>
+  </defs>
+  <!-- Sky -->
+  <rect width="1200" height="480" fill="url(#sky)"/>
+  <!-- Stars -->
+  <circle cx="80" cy="30" r="1.2" fill="#fff" opacity="0.7"/>
+  <circle cx="180" cy="55" r="0.8" fill="#fff" opacity="0.5"/>
+  <circle cx="290" cy="22" r="1.4" fill="#fff" opacity="0.8"/>
+  <circle cx="430" cy="45" r="0.9" fill="#fff" opacity="0.6"/>
+  <circle cx="540" cy="18" r="1.1" fill="#fff" opacity="0.9"/>
+  <circle cx="670" cy="38" r="0.8" fill="#fff" opacity="0.5"/>
+  <circle cx="780" cy="25" r="1.3" fill="#fff" opacity="0.7"/>
+  <circle cx="900" cy="50" r="0.9" fill="#fff" opacity="0.6"/>
+  <circle cx="1020" cy="20" r="1.2" fill="#fff" opacity="0.8"/>
+  <circle cx="1140" cy="42" r="0.9" fill="#fff" opacity="0.6"/>
+  <circle cx="150" cy="80" r="0.7" fill="#fff" opacity="0.4"/>
+  <circle cx="370" cy="70" r="0.8" fill="#fff" opacity="0.5"/>
+  <circle cx="620" cy="65" r="0.7" fill="#fff" opacity="0.4"/>
+  <circle cx="860" cy="75" r="0.9" fill="#fff" opacity="0.5"/>
+  <circle cx="1100" cy="68" r="0.7" fill="#fff" opacity="0.4"/>
+  <!-- Moon glow -->
+  <circle cx="960" cy="60" r="28" fill="#fff" opacity="0.04"/>
+  <circle cx="960" cy="60" r="18" fill="#fff" opacity="0.05"/>
+  <circle cx="960" cy="60" r="10" fill="#fffde7" opacity="0.12"/>
+  <!-- Distant city glow -->
+  <ellipse cx="600" cy="310" rx="400" ry="60" fill="#e8b84b" opacity="0.04"/>
+  <!-- Buildings - Back row -->
+  <rect x="0"    y="240" width="55"  height="240" fill="#060e18"/>
+  <rect x="10"   y="210" width="35"  height="30"  fill="#0a1828"/>
+  <rect x="70"   y="200" width="70"  height="280" fill="#0a1828"/>
+  <rect x="85"   y="185" width="40"  height="15"  fill="#0e1e32"/>
+  <rect x="155"  y="260" width="50"  height="220" fill="#060e18"/>
+  <rect x="220"  y="180" width="85"  height="300" fill="#0a1828"/>
+  <rect x="238"  y="162" width="50"  height="18"  fill="#0e1e32"/>
+  <rect x="248"  y="148" width="30"  height="14"  fill="#0a1828"/>
+  <rect x="320"  y="240" width="60"  height="240" fill="#060e18"/>
+  <rect x="395"  y="195" width="80"  height="285" fill="#0e1e32"/>
+  <rect x="412"  y="178" width="46"  height="17"  fill="#0a1828"/>
+  <rect x="490"  y="150" width="100" height="330" fill="#0a1828"/>
+  <rect x="505"  y="134" width="70"  height="16"  fill="#0e1e32"/>
+  <rect x="520"  y="120" width="40"  height="14"  fill="#0a1828"/>
+  <rect x="530"  y="108" width="20"  height="12"  fill="#0e1e32"/>
+  <rect x="605"  y="220" width="65"  height="260" fill="#060e18"/>
+  <rect x="685"  y="170" width="90"  height="310" fill="#0a1828"/>
+  <rect x="700"  y="155" width="60"  height="15"  fill="#0e1e32"/>
+  <rect x="790"  y="235" width="55"  height="245" fill="#060e18"/>
+  <rect x="860"  y="185" width="80"  height="295" fill="#0a1828"/>
+  <rect x="875"  y="168" width="50"  height="17"  fill="#0e1e32"/>
+  <rect x="955"  y="250" width="60"  height="230" fill="#060e18"/>
+  <rect x="1030" y="200" width="75"  height="280" fill="#0a1828"/>
+  <rect x="1045" y="183" width="45"  height="17"  fill="#0e1e32"/>
+  <rect x="1120" y="255" width="80"  height="225" fill="#060e18"/>
+  <!-- Window lights -->
+  <rect x="228" y="195" width="6" height="5" fill="#e8b84b" opacity="0.5"/>
+  <rect x="245" y="210" width="6" height="5" fill="#e8b84b" opacity="0.35"/>
+  <rect x="262" y="198" width="6" height="5" fill="#29b6d8" opacity="0.45"/>
+  <rect x="510" y="142" width="7" height="5" fill="#e8b84b" opacity="0.6"/>
+  <rect x="528" y="155" width="7" height="5" fill="#e8b84b" opacity="0.4"/>
+  <rect x="546" y="140" width="7" height="5" fill="#fff"    opacity="0.3"/>
+  <rect x="564" y="158" width="7" height="5" fill="#e8b84b" opacity="0.5"/>
+  <rect x="700" y="168" width="7" height="5" fill="#29b6d8" opacity="0.55"/>
+  <rect x="718" y="182" width="7" height="5" fill="#e8b84b" opacity="0.4"/>
+  <rect x="875" y="178" width="6" height="5" fill="#e8b84b" opacity="0.5"/>
+  <rect x="892" y="195" width="6" height="5" fill="#fff"    opacity="0.25"/>
+  <rect x="1046" y="193" width="6" height="5" fill="#29b6d8" opacity="0.45"/>
+  <rect x="1063" y="210" width="6" height="5" fill="#e8b84b" opacity="0.4"/>
+  <!-- Horizon fog -->
+  <rect x="0" y="300" width="1200" height="40" fill="url(#fog-l)"/>
+  <!-- Ground -->
+  <rect x="0" y="340" width="1200" height="140" fill="#040b12"/>
+  <!-- Road reflections -->
+  <line x1="0"    y1="380" x2="1200" y2="380" stroke="#e8b84b" stroke-width="0.5" opacity="0.12"/>
+  <line x1="0"    y1="390" x2="1200" y2="390" stroke="#29b6d8" stroke-width="0.3" opacity="0.08"/>
+  <!-- Golden hour glow line -->
+  <rect x="0" y="339" width="1200" height="2" fill="url(#glow-h)"/>
+</svg>

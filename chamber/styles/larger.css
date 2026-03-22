@@ -1,12 +1,130 @@
-@media (min-width: 32rem) {
+/* ============================================================
+   Chamber — larger.css  |  Responsive breakpoints
+   ============================================================ */
 
-  nav ul {
-    display: flex;
-    gap: 1rem;
+/* ── 640px+ ── */
+@media (min-width: 640px) {
+  .chamber-main { padding: 0 2rem 3rem; }
+
+  .hero-title { font-size: 2.4rem; }
+
+  .spotlights-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 
-  #members.grid {
+  .spotlight {
+    flex-direction: row;
+    text-align: left;
+    align-items: flex-start;
+  }
+
+  .spot-logo { flex-shrink: 0; }
+}
+
+/* ── 768px+ (horizontal nav) ── */
+@media (min-width: 768px) {
+  #menu-btn { display: none; }
+
+  nav {
+    background: rgba(6,10,15,0.96);
+    border-bottom: 1px solid var(--border);
+  }
+
+  nav ul {
+    display: flex !important;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+
+  nav ul li a {
+    border-bottom: none;
+    border-left: none;
+    padding: 1rem 1.4rem;
+    font-size: 0.72rem;
+    position: relative;
+    color: var(--text-dim);
+  }
+
+  nav ul li a::after {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 50%;
+    transform: translateX(-50%);
+    width: 0; height: 2px;
+    background: var(--gold);
+    transition: width var(--transition);
+    border-radius: 2px 2px 0 0;
+  }
+
+  nav ul li a:hover {
+    color: var(--gold);
+    background: transparent;
+    padding-left: 1.4rem;
+  }
+
+  nav ul li a:hover::after,
+  nav ul li a.active::after { width: 60%; }
+
+  nav ul li a.active {
+    color: var(--gold);
+    background: transparent;
+    border-left: none;
+  }
+
+  /* Two-column main content */
+  .chamber-main { padding: 0 2rem 3rem; }
+
+  .hero-img { max-height: 420px; }
+  .hero-title { font-size: 2.8rem; }
+
+  .content-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .spotlights-section { grid-column: 1 / -1; }
+
+  .spotlights-grid {
     grid-template-columns: repeat(3, 1fr);
   }
 
+  .spotlight {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+
+  /* Footer grid */
+  .footer-inner {
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 2rem;
+  }
+
+  .footer-copy { text-align: right; }
+}
+
+/* ── 1024px+ ── */
+@media (min-width: 1024px) {
+  header { padding: 0 3rem; }
+  .chamber-main { padding: 0 3rem 3rem; }
+
+  .hero-img { max-height: 480px; }
+  .hero-title { font-size: 3.2rem; }
+  .hero-content { padding: 2.5rem 3rem 2.25rem; }
+
+  .content-grid { gap: 2rem; }
+}
+
+/* ── 1280px+ ── */
+@media (min-width: 1280px) {
+  header { padding: 0 4rem; }
+  .chamber-main { padding: 0 4rem 4rem; }
 }

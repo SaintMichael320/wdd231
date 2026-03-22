@@ -1,0 +1,84 @@
+{
+  "members": [
+    {
+      "id": 1,
+      "name": "Pinnacle Tech Solutions",
+      "address": "142 Innovation Drive, Pretoria, 0001",
+      "phone": "+27 12 345 6789",
+      "website": "https://pinnacletech.example.com",
+      "image": "images/pinnacle-tech.svg",
+      "membership": "gold",
+      "description": "Leading provider of enterprise software solutions and IT consulting services across Sub-Saharan Africa."
+    },
+    {
+      "id": 2,
+      "name": "Savanna Capital Group",
+      "address": "88 Church Street, Pretoria CBD, 0002",
+      "phone": "+27 12 456 7890",
+      "website": "https://savannacapital.example.com",
+      "image": "images/savanna-capital.svg",
+      "membership": "gold",
+      "description": "Investment and financial advisory services for businesses and high-net-worth individuals."
+    },
+    {
+      "id": 3,
+      "name": "Ubuntu Construction Co.",
+      "address": "55 Voortrekker Road, Pretoria West, 0083",
+      "phone": "+27 12 567 8901",
+      "website": "https://ubuntuconstruction.example.com",
+      "image": "images/ubuntu-construction.svg",
+      "membership": "silver",
+      "description": "Full-service construction and project management for commercial and residential developments."
+    },
+    {
+      "id": 4,
+      "name": "Baobab Marketing Agency",
+      "address": "27 Arcadia Street, Hatfield, 0083",
+      "phone": "+27 12 678 9012",
+      "website": "https://baobabmarketing.example.com",
+      "image": "images/baobab-marketing.svg",
+      "membership": "silver",
+      "description": "Creative digital marketing, brand strategy, and social media management for growing businesses."
+    },
+    {
+      "id": 5,
+      "name": "Kalahari Logistics",
+      "address": "301 Nossob Crescent, Centurion, 0184",
+      "phone": "+27 12 789 0123",
+      "website": "https://kalahari-logistics.example.com",
+      "image": "images/kalahari-logistics.svg",
+      "membership": "gold",
+      "description": "Pan-African freight forwarding, warehousing, and integrated supply chain management."
+    },
+    {
+      "id": 6,
+      "name": "Sunbird Healthcare",
+      "address": "19 Boom Street, Pretoria CBD, 0001",
+      "phone": "+27 12 890 1234",
+      "website": "https://sunbirdhealthcare.example.com",
+      "image": "images/sunbird-healthcare.svg",
+      "membership": "silver",
+      "description": "Private healthcare services, corporate wellness programmes, and occupational health solutions."
+    },
+    {
+      "id": 7,
+      "name": "Highveld Energy Systems",
+      "address": "77 Paul Kruger Street, Pretoria, 0002",
+      "phone": "+27 12 901 2345",
+      "website": "https://highveldenergy.example.com",
+      "image": "images/highveld-energy.svg",
+      "membership": "gold",
+      "description": "Solar installation, renewable energy systems, and energy auditing for commercial clients."
+    },
+    {
+      "id": 8,
+      "name": "Acacia Law Firm",
+      "address": "64 Vermeulen Street, Pretoria, 0002",
+      "phone": "+27 12 012 3456",
+      "website": "https://acacialaw.example.com",
+      "image": "images/acacia-law.svg",
+      "membership": "silver",
+      "description": "Corporate, commercial, property, and labour law specialists with 25 years of Pretoria expertise."
+    }
+  ]
+}
