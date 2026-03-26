@@ -2,11 +2,18 @@
    Chamber — larger.css  |  Responsive breakpoints
    ============================================================ */
 
+/* ── 480px+ — small phones with more room ── */
+@media (min-width: 480px) {
+  .hero { min-height: 460px; }
+  .hero-content { padding: 1.5rem 1.75rem 1.75rem; }
+}
+
 /* ── 640px+ ── */
 @media (min-width: 640px) {
   .chamber-main { padding: 0 2rem 3rem; }
 
-  .hero-title { font-size: 2.4rem; }
+  .hero { min-height: 500px; }
+  .hero-content { padding: 2rem 2rem 2rem; }
 
   .spotlights-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -21,7 +28,7 @@
   .spot-logo { flex-shrink: 0; }
 }
 
-/* ── 768px+ (horizontal nav) ── */
+/* ── 768px+ (horizontal nav + two-column layout) ── */
 @media (min-width: 768px) {
   #menu-btn { display: none; }
 
@@ -46,7 +53,7 @@
     padding: 1rem 1.4rem;
     font-size: 0.72rem;
     position: relative;
-    color: var(--text-dim);
+    color: var(--text-muted);
   }
 
   nav ul li a::after {
@@ -75,11 +82,12 @@
     border-left: none;
   }
 
-  /* Two-column main content */
-  .chamber-main { padding: 0 2rem 3rem; }
+  /* Hero */
+  .hero { min-height: 420px; }
+  .hero-content { padding: 2rem 2.5rem 2.25rem; }
 
-  .hero-img { max-height: 420px; }
-  .hero-title { font-size: 2.8rem; }
+  /* Two-column content grid */
+  .chamber-main { padding: 0 2rem 3rem; }
 
   .content-grid {
     display: grid;
@@ -100,7 +108,7 @@
     align-items: center;
   }
 
-  /* Footer grid */
+  /* Footer */
   .footer-inner {
     flex-direction: row;
     align-items: flex-start;
@@ -116,9 +124,8 @@
   header { padding: 0 3rem; }
   .chamber-main { padding: 0 3rem 3rem; }
 
-  .hero-img { max-height: 480px; }
-  .hero-title { font-size: 3.2rem; }
-  .hero-content { padding: 2.5rem 3rem 2.25rem; }
+  .hero { min-height: 480px; }
+  .hero-content { padding: 2.5rem 3rem 2.5rem; }
 
   .content-grid { gap: 2rem; }
 }
@@ -127,4 +134,5 @@
 @media (min-width: 1280px) {
   header { padding: 0 4rem; }
   .chamber-main { padding: 0 4rem 4rem; }
+  .hero { min-height: 520px; }
 }
