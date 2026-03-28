@@ -6,7 +6,6 @@
   <meta name="description" content="WDD231 Frontend Web Development I – Student home page for BYU-Idaho web development certificate coursework." />
   <meta name="author" content="Michael Pienaar" />
 
-  <!-- Open Graph / Facebook Social Media Meta Tags -->
   <meta property="og:title" content="Michael Pienaar | WDD231 Frontend Web Development I" />
   <meta property="og:description" content="Student home page for WDD231 at BYU-Idaho. Tracking progress through the Web and Computer Programming certificate, covering responsive design, semantic HTML, modern CSS, and JavaScript." />
   <meta property="og:image" content="https://saintmichael320.github.io/wdd231/images/logo.svg" />
@@ -16,11 +15,9 @@
 
   <title>WDD231 | Home</title>
 
-  <!-- CSS -->
   <link rel="stylesheet" href="styles/small.css" />
   <link rel="stylesheet" href="styles/larger.css" />
 
-  <!-- JavaScript -->
   <script src="scripts/navigation.js" defer></script>
   <script src="scripts/date.js" defer></script>
   <script src="scripts/course.js" defer></script>
@@ -105,13 +102,16 @@
       </section>
 
     </div><!-- .sections-grid -->
+
+    <!-- MODAL DIALOG — placed just before the closing main tag as required -->
+    <dialog id="course-details" aria-modal="true" aria-labelledby="modal-course-code"></dialog>
+
   </main>
 
   <!-- FOOTER -->
   <footer>
     <div class="footer-inner">
 
-      <!-- Social Links -->
       <div class="footer-social" aria-label="Social media links">
         <a href="https://github.com/SaintMichael320" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
@@ -133,13 +133,11 @@
         </a>
       </div>
 
-      <!-- Copyright Info -->
       <div class="footer-info-center footer-info">
         <p>&copy; <span id="copyright-year"></span> Michael Pienaar</p>
         <p>Pretoria, South Africa</p>
       </div>
 
-      <!-- Last Modified -->
       <div class="footer-info">
         <p id="lastModified"></p>
       </div>
