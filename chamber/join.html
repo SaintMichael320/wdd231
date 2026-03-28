@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Join the Pretoria Chamber of Commerce — apply for membership and connect with Pretoria's business community.">
+  <meta name="author" content="Michael Pienaar">
+  <title>Pretoria Chamber of Commerce | Join</title>
+  <link rel="icon" href="../favicon.ico">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles/small.css">
+  <link rel="stylesheet" href="styles/join.css">
+  <link rel="stylesheet" href="styles/larger.css">
+
+  <script src="scripts/navigation.js" defer></script>
+  <script src="scripts/date.js" defer></script>
+  <script src="scripts/join.js" defer></script>
+</head>
+<body>
+
+<!-- PRELOADER -->
+<div class="preloader" id="preloader" aria-hidden="true">
+  <div class="preloader-emblem">
+    <span class="em-top">PTA</span>
+    <span class="em-mid">CoC</span>
+  </div>
+  <div class="preloader-bar"></div>
+</div>
+
+<div class="nav-overlay" id="nav-overlay" aria-hidden="true"></div>
+
+<!-- HEADER -->
+<header>
+  <a href="index.html" class="header-logo" aria-label="Pretoria Chamber of Commerce home">
+    <div class="logo-emblem" aria-hidden="true">
+      <span class="em-top">PTA</span>
+      <span class="em-mid">CoC</span>
+    </div>
+    <span class="logo-text">
+      <span class="logo-name">Pretoria CoC</span>
+      <span class="logo-sub">Chamber of Commerce</span>
+    </span>
+  </a>
+  <button id="menu-btn" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-menu">
+    <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+  </button>
+</header>
+
+<!-- NAVIGATION -->
+<nav id="site-nav" aria-label="Primary navigation">
+  <ul id="nav-menu" role="list">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="directory.html">Directory</a></li>
+    <li><a href="join.html" class="active" aria-current="page">Join</a></li>
+    <li><a href="discover.html">Discover</a></li>
+  </ul>
+</nav>
+
+<!-- MAIN -->
+<main class="chamber-main">
+
+  <!-- PAGE INTRO -->
+  <div class="page-intro">
+    <p class="hero-eyebrow">Membership Application</p>
+    <h1 class="page-title">Join the Chamber</h1>
+    <p class="page-subtitle">
+      Become part of Pretoria's premier business network and unlock exclusive
+      opportunities for growth, advocacy, and connection.
+    </p>
+  </div>
+
+  <!-- JOIN LAYOUT: form left, cards right on desktop -->
+  <div class="join-layout">
+
+    <!-- FORM -->
+    <div class="join-form-col">
+      <div class="card join-form-card">
+        <h2 class="s-head">Application Form</h2>
+
+        <form id="membership-form" method="get" action="thankyou.html">
+
+          <!-- First + Last name row -->
+          <div class="form-row">
+            <label class="form-group" for="fname">
+              <span class="form-label">First Name <span class="req" aria-hidden="true">*</span></span>
+              <input
+                type="text"
+                id="fname"
+                name="fname"
+                required
+                title="Enter your first name"
+                autocomplete="given-name"
+                placeholder="Michael"
+              >
+            </label>
+            <label class="form-group" for="lname">
+              <span class="form-label">Last Name <span class="req" aria-hidden="true">*</span></span>
+              <input
+                type="text"
+                id="lname"
+                name="lname"
+                required
+                title="Enter your last name"
+                autocomplete="family-name"
+                placeholder="Pienaar"
+              >
+            </label>
+          </div>
+
+          <!-- Organisational Title -->
+          <label class="form-group" for="orgtitle">
+            <span class="form-label">Title / Position within Organisation</span>
+            <input
+              type="text"
+              id="orgtitle"
+              name="orgtitle"
+              title="Your title within the organisation — letters, hyphens, and spaces only, minimum 7 characters"
+              autocomplete="organization-title"
+              pattern="[a-zA-Z\- ]{7,}"
+              placeholder="Chief Executive Officer"
+            >
+            <span class="form-hint">Letters, hyphens &amp; spaces only · min. 7 characters</span>
+          </label>
+
+          <!-- Email -->
+          <label class="form-group" for="email">
+            <span class="form-label">Email Address <span class="req" aria-hidden="true">*</span></span>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              required
+              title="Enter a valid email address"
+              autocomplete="email"
+              placeholder="michael@example.co.za"
+            >
+          </label>
+
+          <!-- Mobile -->
+          <label class="form-group" for="phone">
+            <span class="form-label">Mobile Phone <span class="req" aria-hidden="true">*</span></span>
+            <input
+              type="tel"
+              id="phone"
+              name="phone"
+              required
+              title="Enter your mobile phone number"
+              autocomplete="tel"
+              placeholder="+27 82 000 0000"
+            >
+          </label>
+
+          <!-- Business Name -->
+          <label class="form-group" for="orgname">
+            <span class="form-label">Business / Organisation Name <span class="req" aria-hidden="true">*</span></span>
+            <input
+              type="text"
+              id="orgname"
+              name="orgname"
+              required
+              title="Enter your business or organisation name"
+              autocomplete="organization"
+              placeholder="Pienaar Enterprises (Pty) Ltd"
+            >
+          </label>
+
+          <!-- Membership Level -->
+          <label class="form-group" for="membership">
+            <span class="form-label">Membership Level <span class="req" aria-hidden="true">*</span></span>
+            <select id="membership" name="membership" required title="Select your desired membership level">
+              <option value="" disabled selected>Select a level…</option>
+              <option value="np">NP Membership — Non-Profit (No Fee)</option>
+              <option value="bronze">Bronze Membership — R750/month</option>
+              <option value="silver">Silver Membership — R1,500/month</option>
+              <option value="gold">Gold Membership — R3,000/month</option>
+            </select>
+          </label>
+
+          <!-- Description -->
+          <label class="form-group" for="description">
+            <span class="form-label">Business Description</span>
+            <textarea
+              id="description"
+              name="description"
+              title="Briefly describe your business or organisation"
+              rows="4"
+              placeholder="Tell us about your business and what makes it unique…"
+            ></textarea>
+          </label>
+
+          <!-- Hidden timestamp -->
+          <input type="hidden" id="timestamp" name="timestamp">
+
+          <div class="form-footer">
+            <p class="form-note"><span class="req">*</span> Indicates a required field</p>
+            <input type="submit" value="Submit Application" class="btn-submit">
+          </div>
+
+        </form>
+      </div><!-- .join-form-card -->
+    </div><!-- .join-form-col -->
+
+    <!-- MEMBERSHIP CARDS SIDEBAR -->
+    <aside class="membership-sidebar" aria-label="Membership level information">
+      <h2 class="s-head">Membership Levels</h2>
+
+      <!-- NP -->
+      <div class="membership-card level-np">
+        <div class="mc-accent-bar"></div>
+        <div class="mc-inner">
+          <div class="mc-badge">NP</div>
+          <div class="mc-body">
+            <h3 class="mc-title">NP Membership</h3>
+            <p class="mc-sub">Non-Profit Organisations</p>
+            <p class="mc-fee">No Fee</p>
+            <p class="mc-teaser">Full Chamber access at no cost for registered non-profit organisations.</p>
+          </div>
+          <button class="btn-learn" data-modal="modal-np" aria-haspopup="dialog">
+            Learn More <span aria-hidden="true">→</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Bronze -->
+      <div class="membership-card level-bronze">
+        <div class="mc-accent-bar"></div>
+        <div class="mc-inner">
+          <div class="mc-badge">Br</div>
+          <div class="mc-body">
+            <h3 class="mc-title">Bronze Membership</h3>
+            <p class="mc-sub">Emerging Businesses</p>
+            <p class="mc-fee">R750 <span class="mc-period">/month</span></p>
+            <p class="mc-teaser">Build your presence in Pretoria's business community with essential Chamber benefits.</p>
+          </div>
+          <button class="btn-learn" data-modal="modal-bronze" aria-haspopup="dialog">
+            Learn More <span aria-hidden="true">→</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Silver -->
+      <div class="membership-card level-silver">
+        <div class="mc-accent-bar"></div>
+        <div class="mc-inner">
+          <div class="mc-badge">Ag</div>
+          <div class="mc-body">
+            <h3 class="mc-title">Silver Membership</h3>
+            <p class="mc-sub">Growing Enterprises</p>
+            <p class="mc-fee">R1,500 <span class="mc-period">/month</span></p>
+            <p class="mc-teaser">Elevate your brand with homepage spotlights and enhanced networking access.</p>
+          </div>
+          <button class="btn-learn" data-modal="modal-silver" aria-haspopup="dialog">
+            Learn More <span aria-hidden="true">→</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Gold -->
+      <div class="membership-card level-gold">
+        <div class="mc-accent-bar"></div>
+        <div class="mc-inner">
+          <div class="mc-badge">Au</div>
+          <div class="mc-body">
+            <h3 class="mc-title">Gold Membership</h3>
+            <p class="mc-sub">Established Leaders</p>
+            <p class="mc-fee">R3,000 <span class="mc-period">/month</span></p>
+            <p class="mc-teaser">The pinnacle of Chamber membership — maximum exposure and exclusive executive access.</p>
+          </div>
+          <button class="btn-learn" data-modal="modal-gold" aria-haspopup="dialog">
+            Learn More <span aria-hidden="true">→</span>
+          </button>
+        </div>
+      </div>
+
+    </aside>
+
+  </div><!-- .join-layout -->
+
+  <!-- ─── MODALS ─── -->
+
+  <!-- NP Modal -->
+  <dialog class="membership-modal" id="modal-np" aria-labelledby="title-np">
+    <div class="modal-inner">
+      <div class="modal-hdr np-hdr">
+        <div class="modal-icon">NP</div>
+        <div class="modal-hdr-text">
+          <h2 class="modal-title" id="title-np">NP Membership</h2>
+          <p class="modal-subtitle">Non-Profit · No Annual Fee</p>
+        </div>
+        <button class="modal-close" data-close="modal-np" aria-label="Close">✕</button>
+      </div>
+      <div class="modal-body">
+        <p class="modal-desc">Designed for registered South African non-profit organisations. Gain full access to the Chamber's foundational benefits at absolutely no cost.</p>
+        <h3 class="benefits-title">Member Benefits</h3>
+        <ul class="benefits-list">
+          <li>Chamber membership directory listing</li>
+          <li>Monthly Chamber newsletter</li>
+          <li>Access to general business networking events</li>
+          <li>Member-only webinar access</li>
+          <li>10% discount on Chamber event tickets</li>
+          <li>Chamber member seal &amp; letterhead rights</li>
+        </ul>
+      </div>
+      <div class="modal-ftr">
+        <button class="btn-select" data-level="np" data-close="modal-np">Select NP Membership</button>
+        <button class="modal-close btn-ghost" data-close="modal-np">Close</button>
+      </div>
+    </div>
+  </dialog>
+
+  <!-- Bronze Modal -->
+  <dialog class="membership-modal" id="modal-bronze" aria-labelledby="title-bronze">
+    <div class="modal-inner">
+      <div class="modal-hdr bronze-hdr">
+        <div class="modal-icon bronze-icon">Br</div>
+        <div class="modal-hdr-text">
+          <h2 class="modal-title" id="title-bronze">Bronze Membership</h2>
+          <p class="modal-subtitle">Emerging Businesses · R750/month</p>
+        </div>
+        <button class="modal-close" data-close="modal-bronze" aria-label="Close">✕</button>
+      </div>
+      <div class="modal-body">
+        <p class="modal-desc">Perfect for new and growing Pretoria businesses ready to build credibility and expand their professional network.</p>
+        <h3 class="benefits-title">Member Benefits</h3>
+        <ul class="benefits-list">
+          <li>All NP Membership benefits</li>
+          <li>1 complimentary event ticket per quarter</li>
+          <li>Business profile on the Chamber website</li>
+          <li>4 hours/month Chamber meeting room access</li>
+          <li>Recognition in the Chamber annual report</li>
+          <li>Access to exclusive member business forums</li>
+        </ul>
+      </div>
+      <div class="modal-ftr">
+        <button class="btn-select bronze-select" data-level="bronze" data-close="modal-bronze">Select Bronze</button>
+        <button class="modal-close btn-ghost" data-close="modal-bronze">Close</button>
+      </div>
+    </div>
+  </dialog>
+
+  <!-- Silver Modal -->
+  <dialog class="membership-modal" id="modal-silver" aria-labelledby="title-silver">
+    <div class="modal-inner">
+      <div class="modal-hdr silver-hdr">
+        <div class="modal-icon silver-icon">Ag</div>
+        <div class="modal-hdr-text">
+          <h2 class="modal-title" id="title-silver">Silver Membership</h2>
+          <p class="modal-subtitle">Growing Enterprises · R1,500/month</p>
+        </div>
+        <button class="modal-close" data-close="modal-silver" aria-label="Close">✕</button>
+      </div>
+      <div class="modal-body">
+        <p class="modal-desc">Elevate your brand in Pretoria's business community. Gain greater visibility, more event access, and the tools to grow with confidence.</p>
+        <h3 class="benefits-title">Member Benefits</h3>
+        <ul class="benefits-list">
+          <li>All Bronze Membership benefits</li>
+          <li>Quarterly homepage spotlight feature</li>
+          <li>3 complimentary event tickets per quarter</li>
+          <li>Priority access to Chamber co-working spaces</li>
+          <li>Press release distribution to Chamber network</li>
+          <li>Reduced rates on Chamber publications &amp; advertising</li>
+          <li>Invitation to Silver &amp; Gold member exclusive dinners</li>
+        </ul>
+      </div>
+      <div class="modal-ftr">
+        <button class="btn-select silver-select" data-level="silver" data-close="modal-silver">Select Silver</button>
+        <button class="modal-close btn-ghost" data-close="modal-silver">Close</button>
+      </div>
+    </div>
+  </dialog>
+
+  <!-- Gold Modal -->
+  <dialog class="membership-modal" id="modal-gold" aria-labelledby="title-gold">
+    <div class="modal-inner">
+      <div class="modal-hdr gold-hdr">
+        <div class="modal-icon gold-icon">Au</div>
+        <div class="modal-hdr-text">
+          <h2 class="modal-title" id="title-gold">Gold Membership</h2>
+          <p class="modal-subtitle">Established Leaders · R3,000/month</p>
+        </div>
+        <button class="modal-close" data-close="modal-gold" aria-label="Close">✕</button>
+      </div>
+      <div class="modal-body">
+        <p class="modal-desc">The pinnacle of Chamber membership. Maximum exposure, executive access, and personalised support for Pretoria's most established enterprises.</p>
+        <h3 class="benefits-title">Member Benefits</h3>
+        <ul class="benefits-list">
+          <li>All Silver Membership benefits</li>
+          <li>Monthly premium homepage spotlight feature</li>
+          <li>Unlimited complimentary event tickets</li>
+          <li>Board meeting attendance &amp; advisory voting rights</li>
+          <li>First rights to expo exhibitor space</li>
+          <li>Dedicated Chamber account manager</li>
+          <li>2 custom training workshops per year</li>
+          <li>Annual Gala Dinner table for four</li>
+          <li>Logo on all Chamber marketing materials</li>
+        </ul>
+      </div>
+      <div class="modal-ftr">
+        <button class="btn-select gold-select" data-level="gold" data-close="modal-gold">Select Gold</button>
+        <button class="modal-close btn-ghost" data-close="modal-gold">Close</button>
+      </div>
+    </div>
+  </dialog>
+
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <div class="footer-brand">
+          <div class="logo-emblem" aria-hidden="true">
+            <span class="em-top">PTA</span>
+            <span class="em-mid">CoC</span>
+          </div>
+          <span class="footer-brand-name">Pretoria CoC</span>
+        </div>
+        <p class="footer-mission">Uniting Pretoria's business community since 1902 — fostering growth, advocacy, and lasting enterprise.</p>
+      </div>
+      <div class="footer-col">
+        <p class="footer-col-title">Quick Links</p>
+        <nav class="footer-links" aria-label="Footer navigation">
+          <a href="index.html">Home</a>
+          <a href="directory.html">Business Directory</a>
+          <a href="join.html">Join the Chamber</a>
+          <a href="discover.html">Discover Pretoria</a>
+        </nav>
+      </div>
+      <div class="footer-col">
+        <p class="footer-col-title">Contact</p>
+        <address class="footer-contact-list">
+          <div class="footer-contact-item"><span class="footer-contact-icon" aria-hidden="true">📍</span><span>272 Vermeulen Street, Pretoria CBD, 0002</span></div>
+          <div class="footer-contact-item"><span class="footer-contact-icon" aria-hidden="true">📞</span><span>+27 12 555 0100</span></div>
+          <div class="footer-contact-item"><span class="footer-contact-icon" aria-hidden="true">✉</span><span>info@ptacoc.co.za</span></div>
+        </address>
+      </div>
+      <div class="footer-col">
+        <p class="footer-col-title">Follow Us</p>
+        <nav class="footer-social" aria-label="Social media links">
+          <a href="https://github.com/SaintMichael320" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="GitHub">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+            GitHub
+          </a>
+          <a href="https://www.linkedin.com/in/michael-pienaar-191242337" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            LinkedIn
+          </a>
+        </nav>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-copy">
+        <strong>&copy; <span id="copyright-year"></span> Pretoria Chamber of Commerce</strong>
+        &nbsp;·&nbsp; Pretoria, South Africa
+        &nbsp;·&nbsp; <span class="footer-credit">Site by Michael Pienaar · WDD231</span>
+      </p>
+      <p id="lastModified"></p>
+    </div>
+  </div>
+</footer>
+
+<script>
+  window.addEventListener('load', () => {
+    const pre = document.getElementById('preloader');
+    if (pre) setTimeout(() => pre.classList.add('hidden'), 400);
+  });
+</script>
+
+</body>
+</html>
