@@ -3,8 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Thank you for applying to the Pretoria Chamber of Commerce.">
+  <meta name="description" content="Your membership application to the Pretoria Chamber of Commerce has been received. We will be in touch with you shortly.">
   <meta name="author" content="Michael Pienaar">
+
+  <meta property="og:title" content="Application Received — Pretoria Chamber of Commerce">
+  <meta property="og:description" content="Thank you for applying to join the Pretoria Chamber of Commerce. Your application is confirmed and our team will be in touch soon.">
+  <meta property="og:image" content="https://saintmichael320.github.io/wdd231/chamber/images/hero.svg">
+  <meta property="og:url" content="https://saintmichael320.github.io/wdd231/chamber/thankyou.html">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_ZA">
+
   <title>Pretoria Chamber of Commerce | Application Received</title>
   <link rel="icon" href="../favicon.ico">
 
@@ -13,8 +21,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="styles/small.css">
-  <link rel="stylesheet" href="styles/join.css">
   <link rel="stylesheet" href="styles/larger.css">
+  <link rel="stylesheet" href="styles/join.css">
 
   <script src="scripts/navigation.js" defer></script>
   <script src="scripts/date.js" defer></script>
@@ -22,6 +30,7 @@
 </head>
 <body>
 
+<!-- PRELOADER -->
 <div class="preloader" id="preloader" aria-hidden="true">
   <div class="preloader-emblem">
     <span class="em-top">PTA</span>
@@ -32,6 +41,7 @@
 
 <div class="nav-overlay" id="nav-overlay" aria-hidden="true"></div>
 
+<!-- HEADER -->
 <header>
   <a href="index.html" class="header-logo" aria-label="Pretoria Chamber of Commerce home">
     <div class="logo-emblem" aria-hidden="true">
@@ -44,10 +54,13 @@
     </span>
   </a>
   <button id="menu-btn" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-menu">
-    <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+    <span class="bar"></span>
+    <span class="bar"></span>
+    <span class="bar"></span>
   </button>
 </header>
 
+<!-- NAVIGATION -->
 <nav id="site-nav" aria-label="Primary navigation">
   <ul id="nav-menu" role="list">
     <li><a href="index.html">Home</a></li>
@@ -57,21 +70,25 @@
   </ul>
 </nav>
 
+<!-- MAIN -->
 <main class="chamber-main">
 
   <div class="page-intro">
     <p class="hero-eyebrow">Application Received</p>
-    <h1 class="page-title">Welcome to the Chamber</h1>
-    <p class="page-subtitle">Your application has been submitted. A member of our team will be in touch with you shortly.</p>
+    <h1 class="page-title" id="thankyou-heading">Welcome to the Chamber</h1>
+    <p class="page-subtitle">
+      Your application has been submitted successfully. A member of our team
+      will be in touch with you shortly.
+    </p>
   </div>
 
   <div class="thankyou-layout">
-
-    <!-- Confirmation summary -->
     <div class="card thankyou-card fade-in">
       <div class="thankyou-check" aria-hidden="true">✓</div>
       <h2 class="s-head">Your Submission Summary</h2>
-      <p class="thankyou-note">Please review the information we received below. Keep this for your records.</p>
+      <p class="thankyou-note">
+        Please review the information we received below and keep it for your records.
+      </p>
 
       <dl id="submission-summary" class="summary-grid">
         <!-- Populated by thankyou.js -->
@@ -82,14 +99,15 @@
         <a href="directory.html" class="btn-ghost-link">Browse the Directory</a>
       </div>
     </div>
-
   </div>
 
 </main>
 
+<!-- FOOTER -->
 <footer>
   <div class="footer-inner">
     <div class="footer-grid">
+
       <div class="footer-col">
         <div class="footer-brand">
           <div class="logo-emblem" aria-hidden="true">
@@ -98,8 +116,12 @@
           </div>
           <span class="footer-brand-name">Pretoria CoC</span>
         </div>
-        <p class="footer-mission">Uniting Pretoria's business community since 1902.</p>
+        <p class="footer-mission">
+          Uniting Pretoria's business community since 1902 — fostering growth,
+          advocacy, and lasting enterprise across South Africa's capital.
+        </p>
       </div>
+
       <div class="footer-col">
         <p class="footer-col-title">Quick Links</p>
         <nav class="footer-links" aria-label="Footer navigation">
@@ -109,22 +131,35 @@
           <a href="discover.html">Discover Pretoria</a>
         </nav>
       </div>
+
       <div class="footer-col">
         <p class="footer-col-title">Contact</p>
         <address class="footer-contact-list">
-          <div class="footer-contact-item"><span class="footer-contact-icon" aria-hidden="true">📍</span><span>272 Vermeulen Street, Pretoria CBD, 0002</span></div>
-          <div class="footer-contact-item"><span class="footer-contact-icon" aria-hidden="true">📞</span><span>+27 12 555 0100</span></div>
-          <div class="footer-contact-item"><span class="footer-contact-icon" aria-hidden="true">✉</span><span>info@ptacoc.co.za</span></div>
+          <div class="footer-contact-item">
+            <span class="footer-contact-icon" aria-hidden="true">📍</span>
+            <span>272 Vermeulen Street, Pretoria CBD, 0002</span>
+          </div>
+          <div class="footer-contact-item">
+            <span class="footer-contact-icon" aria-hidden="true">📞</span>
+            <span>+27 12 555 0100</span>
+          </div>
+          <div class="footer-contact-item">
+            <span class="footer-contact-icon" aria-hidden="true">✉</span>
+            <span>info@ptacoc.co.za</span>
+          </div>
         </address>
       </div>
+
       <div class="footer-col">
         <p class="footer-col-title">Follow Us</p>
         <nav class="footer-social" aria-label="Social media links">
-          <a href="https://github.com/SaintMichael320" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="GitHub">GitHub</a>
-          <a href="https://www.linkedin.com/in/michael-pienaar-191242337" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn">LinkedIn</a>
+          <a href="https://github.com/SaintMichael320" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="GitHub — opens in new tab">GitHub</a>
+          <a href="https://www.linkedin.com/in/michael-pienaar-191242337" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn — opens in new tab">LinkedIn</a>
         </nav>
       </div>
-    </div>
+
+    </div><!-- .footer-grid -->
+
     <div class="footer-bottom">
       <p class="footer-copy">
         <strong>&copy; <span id="copyright-year"></span> Pretoria Chamber of Commerce</strong>
@@ -133,15 +168,9 @@
       </p>
       <p id="lastModified"></p>
     </div>
+
   </div>
 </footer>
-
-<script>
-  window.addEventListener('load', () => {
-    const pre = document.getElementById('preloader');
-    if (pre) setTimeout(() => pre.classList.add('hidden'), 400);
-  });
-</script>
 
 </body>
 </html>
