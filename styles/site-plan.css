@@ -1,0 +1,107 @@
+/* --- Global Styles --- */
+:root {
+    --forest-canopy: #2D4F1E;
+    --granite-peak: #4A4A4A;
+    --autumn-leaf: #D48806;
+    --mist-white: #F9F9F9;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    line-height: 1.6;
+    color: var(--granite-peak);
+    background-color: var(--mist-white);
+    margin: 0;
+    padding: 20px;
+}
+
+/* --- Typography --- */
+h1, h2, h3 {
+    color: var(--forest-canopy);
+    font-weight: 700;
+}
+
+header {
+    text-align: center;
+    border-bottom: 3px solid var(--autumn-leaf);
+    margin-bottom: 30px;
+    padding-bottom: 10px;
+}
+
+.subtitle {
+    font-style: italic;
+    color: var(--granite-peak);
+}
+
+/* --- Color Palette Display --- */
+.color-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.color-box {
+    padding: 15px;
+    border-radius: 4px;
+    flex: 1 1 200px;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* --- Wireframe Simulation (Mobile-First) --- */
+.wireframe-container {
+    background: #eee;
+    padding: 10px;
+    border: 2px dashed #ccc;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.wf-box {
+    background: white;
+    border: 1px solid var(--granite-peak);
+    padding: 10px;
+    text-align: center;
+    font-size: 0.8rem;
+}
+
+/* Desktop layout adjustment for the wireframe simulation */
+@media (min-width: 768px) {
+    .desktop-view {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    
+    .wf-box.full {
+        flex: 1 1 100%;
+    }
+    
+    .wf-box.main {
+        flex: 2;
+        height: 100px;
+    }
+    
+    .wf-box.side {
+        flex: 1;
+        background-color: #f0f0f0;
+    }
+
+    body {
+        max-width: 900px;
+        margin: 40px auto;
+        padding: 40px;
+        box-shadow: 0 0 20px rgba(0,0,0,0.05);
+    }
+}
+
+footer {
+    margin-top: 40px;
+    font-size: 0.9rem;
+    text-align: center;
+    border-top: 1px solid #ddd;
+    padding-top: 20px;
+}
