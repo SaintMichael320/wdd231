@@ -1,0 +1,334 @@
+/* ============================================================
+   discover.css — Discover Pretoria page
+   Named grid areas for 3 different responsive layouts
+   ============================================================ */
+
+/* ── PAGE HERO ── */
+.page-hero {
+  background: linear-gradient(
+    135deg,
+    var(--ink-2) 0%,
+    var(--ink-3) 50%,
+    var(--ink) 100%
+  );
+  border-radius: 0 0 var(--radius-lg) var(--radius-lg);
+  border: 1px solid var(--border);
+  border-top: none;
+  padding: 3rem 1.5rem 2.5rem;
+  margin-bottom: 1.5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.page-hero::before {
+  content: 'DISCOVER';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: var(--font-display);
+  font-size: clamp(4rem, 18vw, 14rem);
+  font-weight: 800;
+  color: var(--gold);
+  opacity: 0.035;
+  letter-spacing: -0.04em;
+  white-space: nowrap;
+  pointer-events: none;
+  user-select: none;
+}
+
+.page-hero::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--gold), var(--cyan), var(--gold), transparent);
+  opacity: 0.7;
+}
+
+.page-hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 600px;
+}
+
+/* ── VISITOR BANNER ── */
+.visitor-banner {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: linear-gradient(135deg, var(--ink-3), var(--ink-2));
+  border: 1px solid var(--gold-dim);
+  border-left: 3px solid var(--gold);
+  border-radius: var(--radius);
+  padding: 0.85rem 1.1rem;
+  margin-bottom: 1.75rem;
+  font-size: 0.8rem;
+  color: var(--cloud);
+  position: relative;
+}
+
+.visitor-banner:empty {
+  display: none;
+}
+
+.visitor-icon {
+  font-size: 1.1rem;
+  flex-shrink: 0;
+}
+
+.visitor-text {
+  flex: 1;
+  line-height: 1.4;
+}
+
+.visitor-close {
+  background: none;
+  border: none;
+  color: var(--text-dim);
+  cursor: pointer;
+  font-size: 0.75rem;
+  padding: 0.25rem 0.4rem;
+  border-radius: var(--radius-sm);
+  transition: color var(--transition), background var(--transition);
+  flex-shrink: 0;
+}
+
+.visitor-close:hover {
+  color: var(--gold);
+  background: var(--gold-glow);
+}
+
+/* ── DISCOVER GRID — SMALL (320px–640px) ── */
+/* Single column, stacked vertically */
+.discover-grid {
+  display: grid;
+  gap: 1.25rem;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "area1"
+    "area2"
+    "area3"
+    "area4"
+    "area5"
+    "area6"
+    "area7"
+    "area8";
+  margin-bottom: 2.5rem;
+}
+
+/* ── CARD ── */
+.discover-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+  transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
+  position: relative;
+}
+
+.discover-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--gold), var(--cyan));
+  opacity: 0;
+  transition: opacity var(--transition);
+  z-index: 1;
+}
+
+.discover-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--border-2);
+}
+
+.discover-card:hover::before {
+  opacity: 1;
+}
+
+/* ── CARD FIGURE / IMAGE ── */
+.card-figure {
+  margin: 0;
+  overflow: hidden;
+  aspect-ratio: 3 / 2;
+  background: var(--surface-2);
+  flex-shrink: 0;
+}
+
+.card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  transition: none; /* No hover on mobile */
+}
+
+/* ── CARD BODY ── */
+.card-body {
+  padding: 1.1rem 1.25rem 1.25rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: 0.5rem;
+}
+
+.card-title {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--white);
+  line-height: 1.25;
+  margin: 0;
+}
+
+.card-address {
+  font-style: normal;
+  font-size: 0.7rem;
+  color: var(--gold);
+  letter-spacing: 0.04em;
+  line-height: 1.45;
+}
+
+.card-desc {
+  font-size: 0.77rem;
+  color: var(--text-muted);
+  line-height: 1.65;
+  flex: 1;
+}
+
+.card-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-family: var(--font-display);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0.55rem 1.1rem;
+  background: transparent;
+  color: var(--gold);
+  border: 1px solid var(--gold-dim);
+  border-radius: 100px;
+  cursor: pointer;
+  transition: all var(--transition);
+  align-self: flex-start;
+  margin-top: 0.25rem;
+  text-decoration: none;
+}
+
+.card-btn:hover, .card-btn:focus {
+  background: var(--gold);
+  color: var(--ink);
+  border-color: var(--gold);
+  box-shadow: 0 4px 16px rgba(232,184,75,0.3);
+  outline: none;
+}
+
+/* ═══════════════════════════════════════════
+   MEDIUM SCREENS (641px – 1024px)
+   2-column asymmetric layout with named areas
+═══════════════════════════════════════════ */
+@media (min-width: 641px) and (max-width: 1024px) {
+  .discover-grid {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "area1 area1"
+      "area2 area3"
+      "area4 area5"
+      "area6 area6"
+      "area7 area8";
+    gap: 1.25rem;
+  }
+
+  /* Wide card (spans full row) gets a horizontal layout */
+  [style*="area1"],
+  [style*="area6"] {
+    flex-direction: row;
+  }
+
+  [style*="area1"] .card-figure,
+  [style*="area6"] .card-figure {
+    width: 45%;
+    aspect-ratio: auto;
+  }
+
+  /* Enable hover image effects on medium+ */
+  .card-img {
+    transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+                filter 0.4s ease,
+                scale 0.4s ease;
+  }
+
+  .discover-card:hover .card-img {
+    transform: scale(1.06);
+    filter: brightness(1.08) saturate(1.15);
+  }
+}
+
+/* ═══════════════════════════════════════════
+   LARGE SCREENS (1025px+)
+   3-column editorial mosaic with named areas
+═══════════════════════════════════════════ */
+@media (min-width: 1025px) {
+  .discover-grid {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+      "area1 area1 area2"
+      "area3 area4 area2"
+      "area5 area6 area7"
+      "area8 area8 area7";
+    gap: 1.5rem;
+  }
+
+  /* Tall cards (span 2 rows) get a column layout naturally */
+  [style*="area2"],
+  [style*="area7"] {
+    flex-direction: column;
+  }
+
+  [style*="area2"] .card-figure,
+  [style*="area7"] .card-figure {
+    aspect-ratio: 3 / 2;
+    height: auto;
+  }
+
+  /* Wide + tall featured cards */
+  [style*="area1"],
+  [style*="area8"] {
+    flex-direction: row;
+  }
+
+  [style*="area1"] .card-figure,
+  [style*="area8"] .card-figure {
+    width: 45%;
+    aspect-ratio: auto;
+  }
+
+  [style*="area1"] .card-title,
+  [style*="area8"] .card-title {
+    font-size: 1.25rem;
+  }
+
+  /* Enable hover image effects on large screens */
+  .card-img {
+    transition: transform 0.45s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+                filter 0.45s ease;
+  }
+
+  .discover-card:hover .card-img {
+    transform: scale(1.07);
+    filter: brightness(1.1) saturate(1.2);
+  }
+}
+
+/* ── DISCOVER PAGE SECTION HEADING SPACING ── */
+.chamber-main > section > .s-head {
+  margin-bottom: 1.25rem;
+}
